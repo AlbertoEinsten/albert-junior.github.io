@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">   
+        <link rel="stylesheet" href="../css/card_style.css">
+        <title>Revisão prova II</title>
+    </head>
+    <body>
+        <header>
+            <nav class="menu">
+                <a href="../index.html" class="btn-volta">&ltVolte aqui</a>
+            </nav>
+        </header>
+        <div id="div_central">
+            <div id="cabecalho">
+                <h1>Personalizador de cartão</h1>
+                <p>Preencha os campos e veja o cartão mudar em tempo real.</p>
+            </div>
+            <div id="div_main">
+                <div class="box">
+                    <h2>Personalize seu cartão</h2>
+                    <label class="form">
+                        Nome do titular
+                        <input type="text" id="input_nome" placeholder="Nome igual ao do cartão">
+                    </label>
+                    <label class="form">
+                        Número do cartão
+                        <input type="text" id="input_numero" placeholder="0000 0000 0000 0000">
+                    </label>
+                    <p class="cinza">Digite até 16 números. Use apenas dados fictícios</p>
+                    <label class="form">
+                        Validade
+                        <input type="text" id="input_validade" placeholder="MM/AA">
+                    </label>
+                    <label class="form">
+                        Bandeira do cartão
+                        <select name="bandeira" id="select_bandeira_cartao">
+                            <option value="VISA">Visa</option>
+                            <option value="Mastercard">Mastercard</option>
+                            <option value="ELO">Elo</option>
+                        </select>
+                    </label>
+                    
+                    Modelo do cartão
+                    <div class="div_modelo">
+
+                        <input type="radio" name="modelo" id="classico" value="classico" checked>
+                        <label for="classico">Clássico</label>
+                        
+                        <input type="radio" name="modelo" id="gold" value="gold">
+                        <label for="gold">Gold</label>
+
+                        <input type="radio" name="modelo" id="platinum" value="platinum">
+                        <label for="platinum">Platinum</label>
+                    </div>
+
+                    Benefícios
+                    <div class="div_modelo">
+                        <input type="checkbox" name="beneficio" id="contactless" value="contactless">
+                        <label for="contactless">Contactless</label>
+
+                        <input type="checkbox" name="beneficio" id="internacional" value="internacional" checked>
+                        <label for="internacional">Internacional</label>
+
+                        <input type="checkbox" name="beneficio" id="cashback" value="cashback">
+                        <label for="cashback">Cashback</label>
+                    </div>
+                    
+                </div>
+                <div class="box boxview">
+                    <h2 id="preview">Pré-visualização</h2>
+                    <div id="div_cartao" class="classic">
+                        <div class="cor_letra fino">Banco Exemplo</div>
+                        <div id="div_chip"></div>
+                        <div id="div_numero_cartao" class="cor_letra">1234 5678 9101 1213</div>
+                        <div id="info_cartao">
+                            <div><!--Titular-->
+                                <div class="info fino" style="font-size: 10px;">TITULAR</div>
+                                <div id="div_nome_titular" class="cor_letra">Exemplo Nome</div>
+                            </div>
+                            <div><!--Validade-->
+                                <div class="info fino" style="font-size: 10px;">VALIDADE</div>
+                                <div id="div_validade" class="cor_letra">MM/AA</div>
+                            </div>
+                            <div><!--Bandeira-->
+                                <div id="div_bandeira" class="cor_letra">VISA</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="div_beneficios">
+                        <div id="div_contactless" class="beneficios hidden">Contactless</div>
+                        <div id="div_internacional" class="beneficios">Internacional</div>
+                        <div id="div_cashback" class="beneficios hidden">Cashback</div>
+                    </div>
+                    <div class="warning cinza">Este cartão é apenas uma demonstração visual. Não insira dados reais.</div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
